@@ -7,8 +7,6 @@ const OAuth2 = google.auth.OAuth2;
 const OAuth2_client = new OAuth2(process.env.CLIENT_ID, process.env.CLIENT_SECRET);
 OAuth2_client.setCredentials({ refresh_token: process.env.REFRESH_TOKEN});
 
-// console.log(process.env.CLIENT_ID, '\n', process.env.CLIENT_SECRET, '\n', process.env.REFRESH_TOKEN, '\n', process.env.GOOGLE_USER)
-
 class MailService {
   accessToken = OAuth2_client.getAccessToken();
   constructor() {
